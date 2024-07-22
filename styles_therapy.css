@@ -104,21 +104,52 @@ header nav ul li .button:hover {
 
 main {
     flex: 1;
-    margin-top: 100px; /* Adjusted to ensure content is not hidden behind fixed header */
+    margin-top: 80px; /* Adjusted to ensure content is not hidden behind fixed header */
 }
 
-.therapy-section {
+.therapy-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center the text horizontally */
+    position: relative;
+    height: 50vh; /* Adjust as needed */
+    background: url('obrazok.jpg') no-repeat center center/cover;
+    color: #fff;
+    z-index: 900;
+    margin-top: -80px; /* Move the hero section up to overlap the header */
+}
+
+.therapy-hero-content {
+    padding: 0 80px;
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 100px; /* Added padding to move the text down */
+    text-align: center; /* Center the text */
+}
+
+.therapy-hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.therapy-hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.therapy-details-section {
     padding: 60px 80px;
     max-width: 1200px;
     margin: auto;
 }
 
-.therapy-section h1 {
+.therapy-details-section h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
 }
 
-.therapy-section p {
+.therapy-details-section p {
     font-size: 1.2em;
     margin-bottom: 30px;
 }
@@ -142,6 +173,76 @@ main {
     list-style: disc;
     margin-left: 20px;
     font-size: 1.1em;
+}
+
+.kvantova-section {
+    background-color: #f8f9fa; /* Svetlý pozadie pre sekciu */
+    padding: 40px 80px; /* Added padding to kvantova section */
+    text-align: left; /* Align text to the left */
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 80px; /* Added padding to match header and footer */
+}
+
+.features {
+    display: flex;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.feature-item {
+    flex-basis: 45%; /* Adjusted width of each feature item */
+}
+
+.feature-details {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.feature-image {
+    width: 100%;
+    height: auto;
+}
+
+.feature-item img {
+    width: 60px; /* Veľkosť obrázkov */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.feature-item ul {
+    list-style-type: disc; /* Add bullets to the list */
+    padding-left: 20px; /* Add some padding to the left to align bullets properly */
+}
+
+.feature-item li {
+    margin-bottom: 10px; /* Add some space between the list items */
+}
+
+.buttons {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start; /* Align buttons to the left */
+}
+
+.button {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #555; /* Zmena farby pri najetí myšou */
+    color: #fff;
 }
 
 footer {
@@ -169,7 +270,7 @@ footer {
 
 @media (max-width: 768px) {
     header .container, 
-    .therapy-section .container, 
+    .therapy-details-section .container, 
     .footer-content {
         padding: 20px;
     }
@@ -189,6 +290,23 @@ footer {
     }
 
     .therapy-image {
+        align-items: center;
+    }
+
+    .kvantova-section {
+        padding: 20px;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+
+    .feature-item {
+        flex-basis: 100%;
+    }
+
+    .buttons {
+        flex-direction: column;
         align-items: center;
     }
 }
