@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.55); /* Initially solid white */
+    color: #000; /* Black text */
+    border-bottom: 1px solid #ccc; /* Optional: border for better separation */
+    position: fixed; /* Make header fixed at the top */
+    width: 100%; /* Ensure it spans the width of the viewport */
+    top: 0; /* Position it at the top */
+    z-index: 1000; /* Ensure it is above other elements */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    font-weight: bold;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px; /* Match footer padding */
+}
+
+header .logo {
+    font-size: 1.5em;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    font-weight: bold;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    color: #000; /* Black text */
+    text-decoration: none;
+    padding: 5px 10px;
+    position: relative;
+    display: block;
+    transition: color 0.3s ease; /* Smooth color transition */
+    font-weight: bold;
+}
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #000; /* Black underline */
+    left: 50%;
+    bottom: 0;
+    transition: width 0.3s ease, left 0.3s ease; /* Smooth animation */
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+header nav ul li .button::after {
+    display: none; /* Disables the underline effect */
+}
+
+header nav ul li .button {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none; /* No text decoration */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 2px solid transparent; /* Maintain dimension consistency */
+    font-weight: bold;
+}
+
+header nav ul li .button:hover {
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+    border: 2px solid #000; /* Black outline */
+}
+
+main {
+    flex: 1;
+    margin-top: 80px; /* Add top margin to prevent content overlap with fixed header */
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: flex-start; /* Aligns items to the left */
+    position: relative;
+    height: 100vh; /* Full height */
+    background: url('obrazok.jpg') no-repeat center center/cover;
+    opacity: 0.9; /* 90% transparency */
+    color: #fff; /* White text */
+    margin-top: -80px; /* Move the hero section up to overlap the header */
+    z-index: 900; /* Ensure it is below the header */
+}
+
+.hero-image {
+    width: 100vw;
+    margin-left: -50vw;
+    left: 50%;
+    position: relative;
+    padding: 0;
+}
+
+.hero-content {
+    padding: 0 80px;
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 100px; /* Added padding to move the text down */
+}
+
+.hero h1 {
+    font-size: 2.5em; /* Larger font size for heading */
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em; /* Smaller font size for the subtitle */
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    align-self: start; /* Aligns the buttons to the left */
+    display: flex;
+    gap: 10px;
+}
+
+.hero .cta, .hero .cta-outline {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    transition: background-color 0.3s, border 0.3s, color 0.3s;
+    font-weight: bold;
+}
+
+.hero .cta {
+    background-color: #000;
+    color: #fff;
+    border: none;
+}
+
+.hero .cta:hover {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+}
+
+.hero .cta-outline {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+}
+
+.hero .cta-outline:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.contact-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.contact-form {
+    flex-basis: 60%;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-form .checkbox-container input {
+    margin-right: 10px;
+}
+
+.contact-form button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+.contact-image {
+    flex-basis: 35%;
+}
+
+.contact-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 80px; /* Added padding to match header */
+}
+
+.footer-logo {
+    font-size: 1.5em;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.kvantova-section {
+    background-color: #f8f9fa; /* Svetlý pozadie pre sekciu */
+    padding: 40px 80px; /* Added padding to kvantova section */
+    text-align: left; /* Align text to the left */
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 80px; /* Added padding to match header and footer */
+}
+
+.features {
+    display: flex;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.feature-item {
+    flex-basis: 45%; /* Adjusted width of each feature item */
+}
+
+.feature-details {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.feature-image {
+    width: 100%;
+    height: auto;
+}
+
+.feature-item img {
+    width: 60px; /* Veľkosť obrázkov */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start; /* Align buttons to the left */
+}
+
+.button {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #555; /* Zmena farby pri najetí myšou */
+    color: #fff;
+}

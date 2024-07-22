@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.55); /* Initially solid white */
+    color: #000; /* Black text */
+    border-bottom: 1px solid #ccc; /* Optional: border for better separation */
+    position: fixed; /* Make header fixed at the top */
+    width: 100%; /* Ensure it spans the width of the viewport */
+    top: 0; /* Position it at the top */
+    z-index: 1000; /* Ensure it is above other elements */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    font-weight: bold;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px; /* Match footer padding */
+}
+
+header .logo {
+    font-size: 1.5em;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    font-weight: bold;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    color: #000; /* Black text */
+    text-decoration: none;
+    padding: 5px 10px;
+    position: relative;
+    display: block;
+    transition: color 0.3s ease; /* Smooth color transition */
+    font-weight: bold;
+}
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #000; /* Black underline */
+    left: 50%;
+    bottom: 0;
+    transition: width 0.3s ease, left 0.3s ease; /* Smooth animation */
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+header nav ul li .button::after {
+    display: none; /* Disables the underline effect */
+}
+
+header nav ul li .button {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none; /* No text decoration */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 2px solid transparent; /* Maintain dimension consistency */
+    font-weight: bold;
+}
+
+header nav ul li .button:hover {
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+    border: 2px solid #000; /* Black outline */
+}
+
+main {
+    flex: 1;
+    margin-top: 100px; /* Add top margin to prevent content overlap with fixed header */
+}
+
+.contact-section {
+    padding: 60px 0;
+    /* background-color: #f8f9fa; */ /* Removed gray background */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 80px; /* Match header and footer padding */
+}
+
+.contact-form {
+    flex-basis: 60%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    text-align: center;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    height: 150px; /* Adjust the height of the "Správa" field */
+    resize: none; /* Disable resizing */
+}
+
+.contact-form button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+    display: block;
+    margin: 0 auto;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+.contact-image {
+    flex-basis: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.contact-image .contact-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.contact-image .contact-info div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-image .contact-info img {
+    width: 40px; /* Icon size */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.contact-image .contact-info p {
+    margin: 5px 0;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 80px; /* Added padding to match header */
+}
+
+.footer-logo {
+    font-size: 1.5em;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}

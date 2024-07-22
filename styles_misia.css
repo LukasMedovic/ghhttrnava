@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.55);
+    color: #000;
+    border-bottom: 1px solid #ccc;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Added max-width */
+    margin: auto;
+    padding: 20px 80px; /* Match footer padding */
+}
+
+header .logo {
+    font-size: 1.5em;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    font-weight: bold;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    color: #000;
+    text-decoration: none;
+    padding: 5px 10px;
+    position: relative;
+    display: block;
+    transition: color 0.3s ease;
+    font-weight: bold;
+}
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    left: 50%;
+    bottom: 0;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+header nav ul li .button::after {
+    display: none;
+}
+
+header nav ul li .button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 2px solid transparent;
+    font-weight: bold;
+}
+
+header nav ul li .button:hover {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+}
+
+main {
+    flex: 1;
+    margin-top: 100px; /* Adjusted to ensure content is not hidden behind fixed header */
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 80px; /* Adjust as necessary */
+    max-width: 1200px;
+    margin: auto;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-image img {
+    width: 250px; /* Made the image smaller */
+    height: auto;
+    border-radius: 15px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.hero .cta, .hero .cta-outline {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, border 0.3s, color 0.3s;
+    font-weight: bold;
+}
+
+.hero .cta {
+    background-color: #000;
+    color: #fff;
+    border: none;
+}
+
+.hero .cta:hover {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+}
+
+.hero .cta-outline {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+}
+
+.hero .cta-outline:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.black-section {
+    background-color: #000;
+    color: #fff;
+    padding: 60px 80px; /* Adjust as necessary */
+    text-align: center;
+}
+
+.black-content {
+    max-width: 600px;
+    margin: auto;
+}
+
+.black-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.black-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.black-section .cta, .black-section .cta-outline {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, border 0.3s, color 0.3s;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.black-section .cta {
+    background-color: #fff;
+    color: #000;
+    border: none;
+}
+
+.black-section .cta:hover {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.black-section .cta-outline {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.black-section .cta-outline:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 80px; /* Added padding to match header */
+}
+
+.footer-logo {
+    font-size: 1.5em;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
