@@ -315,6 +315,15 @@ footer {
     margin-bottom: 20px;
 }
 
+.feature-item ul {
+    list-style-type: disc; /* Add bullets to the list */
+    padding-left: 20px; /* Add some padding to the left to align bullets properly */
+}
+
+.feature-item li {
+    margin-bottom: 10px; /* Add some space between the list items */
+}
+
 .buttons {
     margin-top: 40px;
     display: flex;
@@ -335,4 +344,48 @@ footer {
 .button:hover {
     background-color: #555; /* Zmena farby pri najetí myšou */
     color: #fff;
+}
+
+@media (max-width: 768px) {
+    header .container, 
+    .hero-content, 
+    .container, 
+    .footer-content {
+        padding: 20px;
+    }
+
+    .hero {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .kvantova-section {
+        padding: 20px;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+
+    .feature-item {
+        flex-basis: 100%;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
 }

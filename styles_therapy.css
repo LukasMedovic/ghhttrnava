@@ -166,3 +166,29 @@ footer {
 .footer-contact p {
     margin: 5px 0;
 }
+
+@media (max-width: 768px) {
+    header .container, 
+    .therapy-section .container, 
+    .footer-content {
+        padding: 20px;
+    }
+
+    .therapy-content {
+        flex-direction: column;
+    }
+
+    .therapy-text, 
+    .therapy-image {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .therapy-text {
+        margin-bottom: 20px;
+    }
+
+    .therapy-image {
+        align-items: center;
+    }
+}
