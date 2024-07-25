@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Aptos', sans-serif;
 }
 
 body {
@@ -135,19 +135,33 @@ main {
 }
 
 .hero h1 {
-    font-size: 2.5em; /* Larger font size for heading */
-    margin-bottom: 20px;
+    font-size: 2em; /* Adjusted smaller font size for "Objavte" */
+    margin-top: 1px;
+}
+
+.hero h2 {
+    font-size: 1.2em; /* Smaller font size for "od Dolores Cannon" */
+}
+
+.hero h3 {
+    font-size: 1.2em; /* Smaller font size for "od Dolores Cannon" */
+    margin-top: 4px; /* Adjust margin top to position it closer to the previous text */
+    margin-bottom: 6px; /* Reduce margin bottom for closer spacing */
 }
 
 .hero p {
     font-size: 1.2em; /* Smaller font size for the subtitle */
-    margin-bottom: 30px;
+    margin-top: 20px; /* Increase top margin */
+    margin-bottom: 50px; /* Increased bottom margin to move the text down */
+    line-height: 1.6; /* Increased line height for better readability */
+    letter-spacing: 0.05em; /* Increased letter spacing for better readability */
 }
 
 .hero-buttons {
     align-self: start; /* Aligns the buttons to the left */
     display: flex;
     gap: 10px;
+    margin-top: -35px; /* Move buttons up */
 }
 
 .hero .cta, .hero .cta-outline {
@@ -360,7 +374,11 @@ footer {
     }
 
     .hero h1 {
-        font-size: 2em;
+        font-size: 1.8em;
+    }
+
+    .hero h2 {
+        font-size: 1.4em;
     }
 
     .hero p {

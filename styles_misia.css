@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Aptos', Arial, sans-serif;
 }
 
 body {
@@ -27,9 +27,9 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px; /* Added max-width */
+    max-width: 1200px;
     margin: auto;
-    padding: 20px 80px; /* Match footer padding */
+    padding: 20px 80px;
 }
 
 header .logo {
@@ -104,24 +104,29 @@ header nav ul li .button:hover {
 
 main {
     flex: 1;
-    margin-top: 100px; /* Adjusted to ensure content is not hidden behind fixed header */
+    margin-top: 100px;
 }
 
 .hero {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 60px 80px; /* Adjust as necessary */
+    align-items: flex-start;
+    padding: 60px 80px;
     max-width: 1200px;
     margin: auto;
 }
 
 .hero-content {
     max-width: 600px;
+    margin-right: 20px;
+}
+
+.hero-image {
+    margin-top: 70px; /* Adjusted the margin top to move the image up */
 }
 
 .hero-image img {
-    width: 250px; /* Made the image smaller */
+    width: 250px;
     height: auto;
     border-radius: 15px;
 }
@@ -133,54 +138,28 @@ main {
 
 .hero p {
     font-size: 1.2em;
+    line-height: 1.6; /* Increase line height for better readability */
     margin-bottom: 30px;
+    word-spacing: 0.1em; /* Increase spacing between words */
 }
 
-.hero-buttons {
-    display: flex;
-    gap: 10px;
+.full-width-text {
+    padding: 20px 80px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: -65px; /* Adjusted the margin top to move the text up */
 }
 
-.hero .cta, .hero .cta-outline {
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    text-decoration: none;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s, border 0.3s, color 0.3s;
-    font-weight: bold;
-}
-
-.hero .cta {
-    background-color: #000;
-    color: #fff;
-    border: none;
-}
-
-.hero .cta:hover {
-    background-color: #fff;
-    color: #000;
-    border: 2px solid #000;
-}
-
-.hero .cta-outline {
-    background-color: #fff;
-    color: #000;
-    border: 2px solid #000;
-}
-
-.hero .cta-outline:hover {
-    background-color: #000;
-    color: #fff;
+.full-width-text p {
+    font-size: 1.2em;
+    line-height: 1.6; /* Increase line height for better readability */
+    word-spacing: 0.1em; /* Increase spacing between words */
 }
 
 .black-section {
     background-color: #000;
     color: #fff;
-    padding: 60px 80px; /* Adjust as necessary */
+    padding: 60px 80px;
     text-align: center;
 }
 
@@ -197,6 +176,8 @@ main {
 .black-content p {
     font-size: 1.2em;
     margin-bottom: 30px;
+    line-height: 1.6; /* Increase line height for better readability */
+    word-spacing: 0.1em; /* Increase spacing between words */
 }
 
 .black-section .cta, .black-section .cta-outline {
@@ -231,7 +212,7 @@ main {
     border: 2px solid #fff;
 }
 
-.black-section .cta-outline:hover {
+black-section .cta-outline:hover {
     background-color: #fff;
     color: #000;
 }
@@ -248,7 +229,7 @@ footer {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 80px; /* Added padding to match header */
+    padding: 0 80px;
 }
 
 .footer-logo {
