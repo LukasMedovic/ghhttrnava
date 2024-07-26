@@ -5,6 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kvantová Liečebná Regresná Terapia</title>
     <link rel="stylesheet" href="styles_therapy.css">
+    <style>
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .button-container .button {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border: 2px solid transparent;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .button-container .button:hover {
+            background-color: #fff;
+            color: #000;
+            border: 2px solid #000;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -32,6 +58,9 @@
         </section>
         <section class="kvantova-section">
             <div class="container">
+                <div class="button-container">
+                    <a href="#sedenie" class="button">Kliknite na zobrazenie informácií o sedení</a>
+                </div>
                 <div class="features">
                     <div class="feature-item">
                         <img src="technique.png" alt="Technika" class="icon">
@@ -79,7 +108,7 @@ zahľadíme na určité miesto (ale aj televízor/mobil), zasnívame sa, či spo
 situáciu.</p>
                         </div>
                     </div>
-                    <div class="feature-item">
+                    <div class="feature-item" id="sedenie">
                         <img src="sed.png" alt="Sedenie" class="icon">
                         <div>
                             <h3>Sedenie</h3>
